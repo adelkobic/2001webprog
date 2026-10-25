@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "user_id": 3,
+        "book_id": 3,
+        "created_by": 2,
+        "rented_at": "2026-10-10",
+        "due_date": "2026-11-10",
+        "returned_at": null,
+        "status": "active"
+    },
+    {
+        "id": 2,
+        "user_id": 3,
+        "book_id": 2,
+        "created_by": 2,
+        "rented_at": "2026-09-01",
+        "due_date": "2026-09-15",
+        "returned_at": "2026-09-14",
+        "status": "returned"
+    },
+    {
+        "id": 3,
+        "user_id": 4,
+        "book_id": 1,
+        "created_by": 2,
+        "rented_at": "2026-10-01",
+        "due_date": "2026-10-20",
+        "returned_at": null,
+        "status": "active"
+    }
+]

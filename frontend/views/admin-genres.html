@@ -1,0 +1,14 @@
+<h1 class="h3 mb-3">Genres</h1>
+<div id="page-alert" class="alert alert-danger d-none"></div>
+<form id="genre-form" class="card card-body mb-4" style="max-width: 480px;">
+    <input type="hidden" id="genre-id">
+    <div class="mb-3">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" id="name" required maxlength="100">
+    </div>
+    <div>
+        <button class="btn btn-primary" type="submit" id="save-genre">Add genre</button>
+        <button class="btn btn-secondary d-none" type="button" id="cancel-genre">Cancel</button>
+    </div>
+</form>
+<div id="genre-table" class="table-wrap"></div>

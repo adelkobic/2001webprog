@@ -1,0 +1,20 @@
+<h1 class="h3 mb-3">Rentals</h1>
+<div id="page-alert" class="alert alert-danger d-none"></div>
+<form id="rental-form" class="card card-body mb-4">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="user_id">Patron</label>
+            <select class="form-select" id="user_id" required></select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="book_id">Book</label>
+            <select class="form-select" id="book_id" required></select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="due_date">Due date</label>
+            <input class="form-control" id="due_date" type="date" required>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Rent book</button>
+</form>
+<div id="rental-table" class="table-wrap"></div>

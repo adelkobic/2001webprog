@@ -1,0 +1,41 @@
+<h1 class="h3 mb-3">Users</h1>
+<div id="page-alert" class="alert alert-danger d-none"></div>
+<form id="user-form" class="card card-body mb-4">
+    <input type="hidden" id="user-id">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="first_name">First name</label>
+            <input class="form-control" id="first_name" required maxlength="100">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="last_name">Last name</label>
+            <input class="form-control" id="last_name" required maxlength="100">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" type="email" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="phone">Phone</label>
+            <input class="form-control" id="phone" required maxlength="30">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" type="password" minlength="6">
+            <div class="form-text" id="password-help">At least 6 characters.</div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="role">Role</label>
+            <select class="form-select" id="role" required>
+                <option value="patron">Patron</option>
+                <option value="staff">Staff</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary" type="submit" id="save-user">Add user</button>
+        <button class="btn btn-secondary d-none" type="button" id="cancel-user">Cancel</button>
+    </div>
+</form>
+<div id="user-table" class="table-wrap"></div>
