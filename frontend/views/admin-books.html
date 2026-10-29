@@ -1,0 +1,44 @@
+<h1 class="h3 mb-3">Books</h1>
+<div id="page-alert" class="alert alert-danger d-none"></div>
+<form id="book-form" class="card card-body mb-4">
+    <input type="hidden" id="book-id">
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" id="title" required maxlength="255">
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="author">Author</label>
+            <input class="form-control" id="author" required maxlength="255">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="isbn">ISBN</label>
+            <input class="form-control" id="isbn" required>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="publisher">Publisher</label>
+            <input class="form-control" id="publisher" required maxlength="255">
+        </div>
+        <div class="col-md-4 mb-3">
+            <label class="form-label" for="publication_year">Publication year</label>
+            <input class="form-control" id="publication_year" type="number" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="genre_id">Genre</label>
+            <select class="form-select" id="genre_id" required></select>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label class="form-label" for="total_copies">Total copies</label>
+            <input class="form-control" id="total_copies" type="number" min="1" required>
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label" for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3" required maxlength="1000"></textarea>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary" type="submit" id="save-book">Add book</button>
+        <button class="btn btn-secondary d-none" type="button" id="cancel-book">Cancel</button>
+    </div>
+</form>
+<div id="book-table" class="table-wrap"></div>

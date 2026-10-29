@@ -1,0 +1,16 @@
+<h1 class="h3 mb-3">Catalog</h1>
+<div id="page-alert" class="alert alert-danger d-none"></div>
+<form id="search-form" class="row g-2 mb-4">
+    <div class="col-md-6">
+        <label class="form-label" for="search">Search</label>
+        <input class="form-control" id="search" placeholder="Title, author, or ISBN">
+    </div>
+    <div class="col-md-4">
+        <label class="form-label" for="genre-filter">Genre</label>
+        <select class="form-select" id="genre-filter"></select>
+    </div>
+    <div class="col-md-2 d-flex align-items-end">
+        <button class="btn btn-primary w-100" type="submit">Search</button>
+    </div>
+</form>
+<div id="book-list"></div>

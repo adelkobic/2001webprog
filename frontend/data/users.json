@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "first_name": "Admin",
+        "last_name": "User",
+        "email": "admin@library.local",
+        "phone": "061000001",
+        "password": "admin123",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "first_name": "Sam",
+        "last_name": "Staff",
+        "email": "staff@library.local",
+        "phone": "061000002",
+        "password": "staff123",
+        "role": "staff"
+    },
+    {
+        "id": 3,
+        "first_name": "Ana",
+        "last_name": "Patron",
+        "email": "patron@library.local",
+        "phone": "061000003",
+        "password": "patron123",
+        "role": "patron"
+    },
+    {
+        "id": 4,
+        "first_name": "Ben",
+        "last_name": "Reader",
+        "email": "patron2@library.local",
+        "phone": "061000004",
+        "password": "patron123",
+        "role": "patron"
+    }
+]

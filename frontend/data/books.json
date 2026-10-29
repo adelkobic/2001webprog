@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "isbn": "9780141439518",
+        "publisher": "Penguin",
+        "publication_year": 2002,
+        "genre_id": 1,
+        "total_copies": 3,
+        "description": "A novel about Elizabeth Bennet and Mr Darcy."
+    },
+    {
+        "id": 2,
+        "title": "1984",
+        "author": "George Orwell",
+        "isbn": "9780451524935",
+        "publisher": "Signet",
+        "publication_year": 1961,
+        "genre_id": 1,
+        "total_copies": 2,
+        "description": "A novel about a government that watches everyone."
+    },
+    {
+        "id": 3,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "isbn": "9780547928227",
+        "publisher": "Houghton Mifflin",
+        "publication_year": 2012,
+        "genre_id": 2,
+        "total_copies": 2,
+        "description": "A fantasy story about Bilbo Baggins."
+    },
+    {
+        "id": 4,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "isbn": "9780553380163",
+        "publisher": "Bantam",
+        "publication_year": 1998,
+        "genre_id": 3,
+        "total_copies": 1,
+        "description": "A short book about the universe."
+    }
+]

@@ -1,0 +1,18 @@
+<h1 class="h3 mb-3">Login</h1>
+<div id="form-error" class="alert alert-danger d-none"></div>
+<div id="form-success" class="alert alert-success d-none"></div>
+<form id="login-form" class="card card-body" style="max-width: 420px;">
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" id="email" type="email" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" id="password" type="password" required minlength="6">
+    </div>
+    <button class="btn btn-primary" type="submit">Login</button>
+</form>
+<p class="text-muted small mt-3 mb-0">admin@library.local / admin123</p>
+<p class="text-muted small mb-0">staff@library.local / staff123</p>
+<p class="text-muted small">patron@library.local / patron123</p>
+<p>No account? <a href="#/register">Register</a></p>

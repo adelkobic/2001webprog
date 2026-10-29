@@ -1,0 +1,5 @@
+backend/config/config.php
+backend/logs/*
+!backend/logs/.gitkeep
+vendor/
+.env
