@@ -2,9 +2,9 @@
 
 Library Book Management website. Library patrons can register, browse the book catalog, see their loans, and write reviews for books. Staff and admins lend the books to the patrons.
 
-This milestone includes the static site. The pages change without a full reload. The sample data is in JSON files in `frontend/data/`. Nothing is saved to a server. Refreshing returns the lists back to those files.
+The frontend is a single-page app whose pages change without a full reload. It currently uses sample data from JSON files in `frontend/data/`; it is not connected to the database yet.
 
-The database is WIP. (See diagram at [docs/erd.md](docs/erd.md)).
+The Milestone 2 MySQL schema, sample data, and PHP DAO layer are in place. The API routes and frontend connection are planned for later milestones. See the draft ERD at [docs/erd.md](docs/erd.md).
 
 ## Entities
 
@@ -43,6 +43,14 @@ Book covers will come from Open Library, utilizing the ISBN. The catalog and the
 
 If that image is missing, the page shows `frontend/assets/no-cover.png`. A later milestone should call the Open Library API from the backend, with a timeout and an error log.
 
+## Set up the database
+
+You need MySQL. Import [database/library.sql](database/library.sql) using MySQL Workbench or phpMyAdmin. The script creates the `library` database, five tables, and sample rows. Re-importing the script drops and recreates those tables.
+
+Copy `backend/config/config.example.php` to `backend/config/config.php`, then set the MySQL host, database name, username, and password. The local `config.php` is ignored by Git and should not be committed.
+
+The DAO classes use PDO and prepared statements, but no API routes or database-backed frontend are available yet.
+
 ## Run the pages
 
 From this folder:
@@ -57,4 +65,4 @@ You can also open `frontend/index.html` with the Live Server extension. Opening 
 
 ## Later
 
-The API, Swagger, and the live site are not part of this milestone. The `backend/` folders are left empty for now.
+FlightPHP API routes, Swagger documentation, frontend-to-API integration, and deployment are planned for later milestones.
