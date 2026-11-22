@@ -7,6 +7,7 @@ var Router = {
         '/admin/books': { view: 'views/admin-books.html', show: showAdminBooksPage, roles: ['admin'] },
         '/admin/genres': { view: 'views/admin-genres.html', show: showAdminGenresPage, roles: ['admin'] },
         '/admin/users': { view: 'views/admin-users.html', show: showAdminUsersPage, roles: ['admin'] },
+        '/admin/swagger': { view: 'views/swagger.html', show: showSwaggerPage, roles: ['admin'] },
         '/rentals': { view: 'views/rentals.html', show: showRentalsPage, roles: ['admin', 'staff'] }
     },
 

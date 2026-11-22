@@ -55,13 +55,24 @@ function drawBooks() {
 
 function showCoverWhenReady(book) {
     var image = document.getElementById('cover-' + book.id);
-    var isbn = String(book.isbn || '').replace(/[^0-9Xx]/g, '');
-    if (!image || !isbn) {
+    if (!image || !book.isbn) {
         return;
     }
     image.onerror = function () {
         image.onerror = null;
         image.src = 'assets/no-cover.png';
+        image.title = 'No cover image is available for this ISBN.';
     };
-    image.src = 'https://covers.openlibrary.org/b/isbn/' + encodeURIComponent(isbn) + '-M.jpg?default=false';
+    OpenLibraryService.coverForIsbn(book.isbn).then(function (result) {
+        if (result.cover_url) {
+            image.src = result.cover_url;
+            image.title = 'Cover from Open Library';
+        } else {
+            image.src = 'assets/no-cover.png';
+            image.title = result.message || 'Cover image is not available.';
+        }
+    }).catch(function () {
+        image.src = 'assets/no-cover.png';
+        image.title = 'Cover image could not be loaded.';
+    });
 }
