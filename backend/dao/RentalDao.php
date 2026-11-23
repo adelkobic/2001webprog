@@ -32,10 +32,15 @@ class RentalDao extends BaseDao {
         return $this->query($this->selectSql() . ' WHERE r.id = ?', [$id])->fetch();
     }
 
-    public function countActiveRentals($bookId) {
+    public function countActiveRentals($bookId, $excludingRentalId = null) {
         $sql = "SELECT COUNT(*) AS total FROM rentals
                 WHERE book_id = ? AND status IN ('active', 'overdue')";
-        $row = $this->query($sql, [$bookId])->fetch();
+        $params = [$bookId];
+        if ($excludingRentalId !== null) {
+            $sql .= ' AND id <> ?';
+            $params[] = $excludingRentalId;
+        }
+        $row = $this->query($sql, $params)->fetch();
         return (int) $row['total'];
     }
 
